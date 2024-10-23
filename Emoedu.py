@@ -1,12 +1,11 @@
 import sqlite3
+import os
 from datetime import datetime
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, send_file
 import cv2
 import numpy as np
 import base64
 from fer import FER
-import smtplib
-from email.mime.text import MIMEText
 import webbrowser
 import threading
 
@@ -14,6 +13,11 @@ app = Flask(__name__)
 
 # Configuramos la base de datos SQLite
 def init_db():
+    # Si la base de datos existe, la eliminamos
+    if os.path.exists('emoedu.db'):
+        os.remove('emoedu.db')
+    
+    # Creamos la base de datos nuevamente
     conn = sqlite3.connect('emoedu.db')
     cursor = conn.cursor()
     cursor.execute('''
@@ -42,10 +46,21 @@ def registrar_emocion(alumno, emocion):
 # Configuramos el detector de emociones
 emotion_detector = FER(mtcnn=True)
 
+# Mapeo de emociones predeterminadas de fer a español
+EMOCIONES_TRADUCIDAS = {
+    'angry': 'enfadado',
+    'disgust': 'disgusto',
+    'fear': 'miedo',
+    'happy': 'feliz',
+    'sad': 'triste',
+    'surprise': 'sorpresa',
+    'neutral': 'neutral'
+}
+
 # Ruta para servir la página HTML principal
 @app.route('/')
 def index():
-    return render_template('main.html')
+    return send_file('main.html')  # Utilizamos send_file para enviar el archivo desde la raíz
 
 # Ruta para procesar la detección de emociones
 @app.route('/Emoedu/detect', methods=['POST'])
@@ -67,21 +82,19 @@ def detect_emotion():
         for index, result in enumerate(results):
             (x, y, w, h) = result['box']
             emotion = max(result['emotions'], key=result['emotions'].get)
+
+            # Si la emoción es negativa y está en el mapeo, la registramos en la base de datos
+            if emotion in ['angry', 'disgust', 'fear', 'sad']:
+                emocion_traducida = EMOCIONES_TRADUCIDAS[emotion]
+                registrar_emocion(f"Alumno {index + 1}", emocion_traducida)
+
             faces.append({
                 'x': x,
                 'y': y,
                 'width': w,
                 'height': h,
-                'emotion': emotion
+                'emotion': EMOCIONES_TRADUCIDAS.get(emotion, emotion)
             })
-
-            # Si la emoción es negativa, registramos en la base de datos
-            if emotion in ['frustration', 'confused']:
-                registrar_emocion(f"Alumno {index + 1}", emotion)
-
-            # Si la emoción es "frustration" y la confianza es alta, enviamos una alerta
-            if emotion == 'frustration' and result['emotions'][emotion] > 0.7:
-                send_alert_email()
 
         return jsonify({'faces': faces})
 
