@@ -64,4 +64,4 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENS
 
 ## Contacto
 
-Para cualquier duda o sugerencia, no dudes en contactarme a través de mi perfil de GitHub o enviando un correo a `tuemail@example.com`.
+Para cualquier duda o sugerencia, no dudes en contactarme a través de mi perfil de GitHub o enviando un correo a `miguelperezregueiro@gmail.com`.
