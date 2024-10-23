@@ -37,7 +37,8 @@ Emoedu es una aplicación para detectar las emociones de los alumnos en un aula 
 
 A continuación se muestra una captura de pantalla del funcionamiento de la aplicación:
 
-![Captura de Pantalla de Emoedu](./images/captura.png)
+![EJEMPLO EMOEDU](https://github.com/user-attachments/assets/ef635350-146d-4ae0-9aec-36243037485b)
+
 
 1. **Ejecuta el servidor Flask**:
    ```sh
