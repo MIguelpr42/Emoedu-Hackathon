@@ -4,7 +4,6 @@
     <link rel="icon" href="emoedu_icon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <br></br>
     <title>Detección de Expresiones Faciales</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -53,10 +52,12 @@
             font-size: 1.5em;
             text-align: center;
         }
+
     </style>
 </head>
 <body>
     <header style="text-align: center; margin-bottom: 20px;">
+        <br>
         <h1 style="font-size: 2.5em; margin: 0;">Emoedu</h1>
         <p style="font-size: 1em; color: #b0b0b0; margin: 5px 0;">Sistema de Detección de Emociones en Aulas</p>
     </header>
@@ -107,8 +108,17 @@
                                     ctxOverlay.strokeRect(face.x, face.y, face.width, face.height);
                                     ctxOverlay.fillStyle = 'red';
                                     ctxOverlay.font = '20px Arial';
-                                    ctxOverlay.fillText(`Alumno ${index + 1}: ${face.emotion === 'confusión' ? 'confusión' : face.emotion === 'frustración' ? 'frustración' : face.emotion}`, face.x, face.y - 10);
-                                    return `<strong>Alumno ${index + 1}: ${(face.emotion === 'confusión' ? 'CONFUSIÓN' : face.emotion === 'frustración' ? 'FRUSTRACIÓN' : face.emotion.toUpperCase())}</strong>`;
+                                    const emotionTranslated = {
+                                        'angry': 'enojado',
+                                        'disgust': 'disgusto',
+                                        'fear': 'miedo',
+                                        'happy': 'feliz',
+                                        'sad': 'triste',
+                                        'surprise': 'sorpresa',
+                                        'neutral': 'neutral'
+                                    }[face.emotion] || face.emotion;
+                                    ctxOverlay.fillText(`Alumno ${index + 1}: ${emotionTranslated}`, face.x, face.y - 10);
+                                    return `<strong>Alumno ${index + 1}: ${emotionTranslated.toUpperCase()}</strong>`;
                                 }).join('<br>');
                             }
                         })
