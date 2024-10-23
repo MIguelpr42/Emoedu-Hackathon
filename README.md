@@ -1,12 +1,11 @@
 # Emoedu: Detección de Emociones en Aulas
 
-Emoedu es una aplicación para detectar las emociones de los alumnos en un aula utilizando la cámara de un dispositivo. El objetivo es identificar emociones negativas como "frustración" o "confusión" y notificar al profesor para poder intervenir de manera oportuna.
+Emoedu es una aplicación para detectar las emociones de los alumnos en un aula utilizando la cámara de un dispositivo. El objetivo es identificar emociones negativas como "enfado", "tristeza" o "miedo" y notificar al profesor para poder intervenir de manera oportuna.
 
 ## Características
 
 - **Detección en tiempo real**: Utiliza la cámara del dispositivo para detectar las emociones de los alumnos en tiempo real.
-- **Detección de emociones específicas**: Se enfoca en detectar emociones negativas como "frustración" y "confusión".
-- **Notificación al profesor**: En caso de detectar emociones de frustración con alta confianza, envía una alerta al profesor por correo electrónico.
+- **Detección de emociones específicas**: Se enfoca en detectar emociones negativas como "enfado", "tristeza" y "miedo".
 - **Registro de emociones**: Las emociones detectadas se registran en una base de datos SQLite con el nombre del alumno y la hora del evento.
 
 ## Tecnologías Utilizadas
@@ -16,7 +15,6 @@ Emoedu es una aplicación para detectar las emociones de los alumnos en un aula 
 - **HTML** y **CSS** para la interfaz del usuario.
 - **SQLite** para almacenar las emociones detectadas.
 - **FER (Facial Emotion Recognition)** para la detección de emociones faciales.
-- **DeepFace** (opcional) para detección más avanzada de emociones.
 
 ## Instalación
 
@@ -31,7 +29,7 @@ Emoedu es una aplicación para detectar las emociones de los alumnos en un aula 
    pip install -r requirements.txt
    ```
 
-3. Asegúrate de tener instalado SQLite para la base de datos y configura el servidor SMTP en `Emoedu.py` para enviar las notificaciones por correo electrónico.
+3. Asegúrate de tener instalado SQLite para la base de datos.
 
 ## Uso
 
@@ -48,11 +46,10 @@ Emoedu es una aplicación para detectar las emociones de los alumnos en un aula 
 
 ## Archivos Importantes
 
-- `Emoedu.py`: Backend que maneja la detección de emociones, el envío de alertas por correo y el registro en la base de datos.
+- `Emoedu.py`: Backend que maneja la detección de emociones y el registro en la base de datos.
 - `main.html`: Página principal que contiene el video y la detección de emociones.
-- `emoedu_script.js`: Script JavaScript para manejar la cámara y el procesamiento de imágenes.
+- `fd.js`: Script JavaScript para manejar la cámara y el procesamiento de imágenes.
 - `styles.css`: Estilos de la página para darle una apariencia moderna y clara.
-
 
 ## Contribuir
 
@@ -65,3 +62,4 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENS
 ## Contacto
 
 Para cualquier duda o sugerencia, no dudes en contactarme a través de mi perfil de GitHub o enviando un correo a `miguelperezregueiro@gmail.com`.
+
