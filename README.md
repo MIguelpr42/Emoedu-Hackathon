@@ -64,13 +64,5 @@ Las contribuciones son bienvenidas 🚀. Si tienes una idea para mejorar Emoedu 
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
-## 📧 **Contacto**
-
-¿Tienes alguna duda o sugerencia? ¡No dudes en contactarme!
-- 📩 **Email**: [miguelperezregueiro@gmail.com](mailto:miguelperezregueiro@gmail.com)
-- 🌐 **GitHub**: [Visita mi perfil](https://github.com/MiguelRegueiro)
-
----
-
 Emoedu es más que una herramienta; es un puente hacia el bienestar emocional de los estudiantes. 🌱 Ayudemos a crear entornos de aprendizaje más empáticos y positivos.
 
