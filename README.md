@@ -1,65 +1,76 @@
-# Emoedu: Detección de Emociones en Aulas
+# 🌟 **Emoedu: Detección de Emociones en Aulas**
 
-Emoedu es una aplicación para detectar las emociones de los alumnos en un aula utilizando la cámara de un dispositivo. El objetivo es identificar emociones negativas como "enfado", "tristeza" o "miedo" y notificar al profesor para poder intervenir de manera oportuna.
+Emoedu es una innovadora aplicación diseñada para detectar las emociones de los alumnos en el aula mediante la cámara del dispositivo. Su objetivo es ayudar a los profesores a identificar de manera oportuna emociones negativas, como "enfado", "tristeza" o "miedo", y permitir una intervención adecuada.
 
-## Características
+## 🚀 **Características**
 
-- **Detección en tiempo real**: Utiliza la cámara del dispositivo para detectar las emociones de los alumnos en tiempo real.
-- **Detección de emociones específicas**: Se enfoca en detectar emociones negativas como "enfado", "tristeza" y "miedo".
-- **Registro de emociones**: Las emociones detectadas se registran en una base de datos SQLite con el nombre del alumno y la hora del evento.
+- 🎥 **Detección en Tiempo Real**: Utiliza la cámara del dispositivo para analizar las emociones de los estudiantes en tiempo real, ofreciendo feedback inmediato.
+- 😟 **Detección de Emociones Negativas**: Detecta emociones clave como "enfado", "tristeza" y "miedo" para que los profesores puedan intervenir cuando sea necesario.
+- 📊 **Registro de Emociones**: Guarda un registro de las emociones detectadas en una base de datos SQLite, incluyendo el nombre del alumno y la hora del evento.
 
-## Tecnologías Utilizadas
+## 🛠️ **Tecnologías Utilizadas**
 
 - **Python** con Flask para el backend.
-- **JavaScript** para la detección de video y comunicación con el backend.
+- **JavaScript** para la detección de video y la comunicación con el backend.
 - **HTML** y **CSS** para la interfaz del usuario.
-- **SQLite** para almacenar las emociones detectadas.
-- **FER (Facial Emotion Recognition)** para la detección de emociones faciales.
+- **SQLite** para almacenar los datos de las emociones detectadas.
+- **FER (Facial Emotion Recognition)** para el análisis de las expresiones faciales.
 
-## Instalación
+## ⚙️ **Instalación**
 
-1. Clona este repositorio:
+1. **Clona el Repositorio**:
    ```sh
    git clone https://github.com/tuusuario/emoedu.git
    cd emoedu
    ```
 
-2. Instala las dependencias de Python:
+2. **Instala las Dependencias de Python**:
    ```sh
    pip install -r requirements.txt
    ```
 
-3. Asegúrate de tener instalado SQLite para la base de datos.
+3. **Configura SQLite**: Asegúrate de tener SQLite instalado para gestionar la base de datos.
 
-## Uso
+## 🚦 **Cómo Usar Emoedu**
 
-1. **Ejecuta el servidor Flask**:
+1. **Ejecuta el Servidor Flask**:
    ```sh
    python Emoedu.py
    ```
+   Esto abrirá automáticamente la aplicación en tu navegador en `http://localhost:5000/`.
 
-   Esto abrirá el navegador automáticamente en `http://localhost:5000/`.
+2. **Permitir Acceso a la Cámara**: La aplicación te pedirá acceso a la cámara del dispositivo para realizar la detección de emociones.
 
-2. **Permitir acceso a la cámara**: La aplicación solicitará acceso a la cámara para poder realizar la detección de emociones.
+3. **Visualización en Tiempo Real**: Las emociones detectadas se mostrarán sobre los rostros de los estudiantes, permitiendo una evaluación constante del estado emocional del aula.
 
-3. **Visualización de emociones**: Se mostrarán los recuadros sobre las caras detectadas con la emoción de cada alumno.
+## 🖼️ **Captura de Pantalla**
 
-## Archivos Importantes
+¡Aquí te mostramos cómo luce Emoedu en acción! 😄
 
-- `Emoedu.py`: Backend que maneja la detección de emociones y el registro en la base de datos.
-- `main.html`: Página principal que contiene el video y la detección de emociones.
-- `fd.js`: Script JavaScript para manejar la cámara y el procesamiento de imágenes.
-- `styles.css`: Estilos de la página para darle una apariencia moderna y clara.
+![EJEMPLO EMOEDU](https://github.com/user-attachments/assets/ef635350-146d-4ae0-9aec-36243037485b)
 
-## Contribuir
+## 📁 **Archivos Clave**
 
-Las contribuciones son bienvenidas. Puedes abrir un issue o enviar un pull request para mejoras o nuevas características.
+- `Emoedu.py`: Maneja la lógica del backend para la detección de emociones y el registro de datos.
+- `main.html`: Página principal que incluye el video y la interfaz de detección de emociones.
+- `fd.js`: Script en JavaScript encargado de manejar la cámara y el procesamiento de imágenes.
+- `styles.css`: Estilos visuales que dan a la aplicación un diseño limpio y moderno.
 
-## Licencia
+## 🤝 **Contribuir**
+
+Las contribuciones son bienvenidas 🚀. Si tienes una idea para mejorar Emoedu o deseas agregar nuevas características, ¡abre un issue o envía un pull request!
+
+## 📜 **Licencia**
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
-## Contacto
+## 📧 **Contacto**
 
-Para cualquier duda o sugerencia, no dudes en contactarme a través de mi perfil de GitHub o enviando un correo a `miguelperezregueiro@gmail.com`.
+¿Tienes alguna duda o sugerencia? ¡No dudes en contactarme!
+- 📩 **Email**: [miguelperezregueiro@gmail.com](mailto:miguelperezregueiro@gmail.com)
+- 🌐 **GitHub**: [Visita mi perfil](https://github.com/MiguelRegueiro)
+
+---
+
+Emoedu es más que una herramienta; es un puente hacia el bienestar emocional de los estudiantes. 🌱 Ayudemos a crear entornos de aprendizaje más empáticos y positivos.
 
