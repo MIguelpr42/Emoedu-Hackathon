@@ -60,9 +60,10 @@ Emoedu es una innovadora aplicación diseñada para detectar las emociones de lo
 
 Las contribuciones son bienvenidas 🚀. Si tienes una idea para mejorar Emoedu o deseas agregar nuevas características, ¡abre un issue o envía un pull request!
 
-## 📜 **Licencia**
+## Licencia 📜
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto está licenciado bajo la Licencia GPL 3.0. Consulta el archivo `LICENSE` para más detalles.
+
 
 Emoedu es más que una herramienta; es un puente hacia el bienestar emocional de los estudiantes. 🌱 Ayudemos a crear entornos de aprendizaje más empáticos y positivos.
 
