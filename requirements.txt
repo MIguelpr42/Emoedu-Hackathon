@@ -1,0 +1,10 @@
+Flask==2.0.3
+opencv-python==4.5.5.62
+numpy==1.21.4
+FER==20.0.0
+smtplib
+email
+threading
+base64
+cv2
+
